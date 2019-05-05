@@ -13,8 +13,8 @@
 
 
 #if DEMO_STD_SOCKET_SERVER
-#define     DEMO_SOCK_S_TASK_SIZE      		1024
-#define     DEMO_SOCK_BUF_SIZE            	1024
+#define     DEMO_SOCK_S_TASK_SIZE      		2048
+#define     DEMO_SOCK_BUF_SIZE            	2048
 #define     BACKLOG     7       // how many pending connections queue will hold
 
 
@@ -157,7 +157,8 @@ static void sock_server_recv_task(void *sdata)
 					{
 						tls_uart_write(TLS_UART_1, sock_s->sock_rx, ret);	
 					} else {
-						printf("\nsock[%d] rcv len==%d\n", sock_s->client_fd_queue[i], sock_s->rcv_data_len[i]);
+						//printf("\nsock[%d] rcv len==%d\n", sock_s->client_fd_queue[i], sock_s->rcv_data_len[i]);
+                        send(sock_s->client_fd_queue[i], sock_s->sock_rx, ret, 0);
 					}				
                 }
             }

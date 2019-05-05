@@ -5,16 +5,16 @@
 #define DEMO_OFF	0
 
 //demo 控制台，演示demo的时候必须打开该项
-#define DEMO_CONSOLE				DEMO_OFF
+#define DEMO_CONSOLE				DEMO_ON
 
 //socket demo
-#define DEMO_STD_SOCKET_CLIENT	    (DEMO_OFF && DEMO_CONSOLE)	//标准接口socket client
-#define DEMO_STD_SOCKET_SERVER	    (DEMO_OFF && DEMO_CONSOLE)	//标准接口socket server
+#define DEMO_STD_SOCKET_CLIENT	    (DEMO_ON && DEMO_CONSOLE)	//标准接口socket client
+#define DEMO_STD_SOCKET_SERVER	    (DEMO_ON && DEMO_CONSOLE)	//标准接口socket server
 
 #define DEMO_UDP                    (DEMO_OFF && DEMO_CONSOLE)   //udp 单播和广播
 
 //联网demo，可以用一键配置联网，也可以主动用接口联网
-#define DEMO_CONNECT_NET			(DEMO_OFF && DEMO_CONSOLE)
+#define DEMO_CONNECT_NET			(DEMO_ON && DEMO_CONSOLE)
 
 //apsta联网demo，可以用一键配置联网，也可以主动用接口联网
 #define DEMO_APSTA   		  		(DEMO_OFF && DEMO_CONSOLE)
